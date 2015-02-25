@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+%w(Celeron Corei5 Xeno).each { |name| Cpu.create! name: name }
+%w(Lenobo HP TOSHIBA).each { |name| Maker.create! name: name }
+%w(Tanaka Katoh Satoh).each { |name| Author.create! name: name }
