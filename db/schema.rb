@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150225120209) do
+ActiveRecord::Schema.define(version: 20150227070805) do
 
   create_table "authors", force: true do |t|
     t.string   "name"
@@ -39,6 +39,9 @@ ActiveRecord::Schema.define(version: 20150225120209) do
     t.integer  "author_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type"
   end
+
+  add_index "products", ["type"], name: "index_products_on_type"
 
 end
